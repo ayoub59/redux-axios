@@ -8,13 +8,13 @@ import counter from "./reducers/counter.js";
 import { Provider } from "react-redux";
 
 let store = createStore(
-  counter
-  // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  counter,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
-store.subscribe(() => {
-  console.log(store.getState());
-});
-console.log(store.getState());
+// store.subscribe(() => {
+//   console.log(store.getState());
+// });
+// console.log(store.getState());
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
